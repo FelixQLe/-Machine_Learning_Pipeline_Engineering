@@ -22,9 +22,6 @@ directory_structure.txt
 dags: 
 - contain all python and sql scripts, ml_pipeline run on Apache Airflow, training_log, training_metrics, data
 
-Model_API:
-- contain flask API app, deploying ml_model to predict trading Volume, and ho_to_run.txt
-
 ### Machine Learning architecture
 
 - Task 1: create sql table to store machine learning best params
@@ -35,3 +32,10 @@ Model_API:
 ![Screenshot 2023-05-08 at 4 15 13 AM](https://user-images.githubusercontent.com/93171100/236777778-297e7f10-01a0-467c-82d5-218d319f6836.png)
 
 <img width="1367" alt="Screenshot 2023-05-08 at 4 40 41 AM" src="https://user-images.githubusercontent.com/93171100/236777950-0e9d9121-0f58-498b-8c38-c23a8733d49a.png">
+
+### Model_API:
+- contain flask API app, deploying ml_model to predict trading Volume, and ho_to_run.txt
+- result:
+![Screenshot 2023-05-08 at 12 33 01 PM](https://user-images.githubusercontent.com/93171100/236879582-933e51cf-fbcf-4eca-afcb-3055db07d267.png)
+
+![Screenshot 2023-05-08 at 12 33 22 PM](https://user-images.githubusercontent.com/93171100/236879613-fbdc15d5-89f8-46c1-816e-4beea0fd01c8.png)
