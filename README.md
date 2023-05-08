@@ -8,3 +8,4 @@ Technical Evaluations
 
 
 dags: contain all python and sql scripts, ml_pipeline run on Apache Airflow.
+Model_API: contain flask API app, deploying ml_model to predict trading Volume, and ho_to_run.txt
