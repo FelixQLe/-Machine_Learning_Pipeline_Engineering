@@ -20,7 +20,7 @@
 ### Directory structure: 
 directory_structure.txt
 
-dags: 
+dags subrepo: 
 - contain all python and sql scripts, ml_pipeline run on Apache Airflow, training_log, training_metrics, data
 
 ### Machine Learning architecture
@@ -34,7 +34,7 @@ dags:
 
 <img width="1367" alt="Screenshot 2023-05-08 at 4 40 41 AM" src="https://user-images.githubusercontent.com/93171100/236777950-0e9d9121-0f58-498b-8c38-c23a8733d49a.png">
 
-### Model_API:
+### Model_API subrepo:
 - contain flask API app, deploying ml_model to predict trading Volume, and ho_to_run.txt
 - result:
 ![Screenshot 2023-05-08 at 12 33 01 PM](https://user-images.githubusercontent.com/93171100/236879582-933e51cf-fbcf-4eca-afcb-3055db07d267.png)
