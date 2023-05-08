@@ -1,0 +1,13 @@
+requirements.text
+flask
+pandas
+joblib
+tensorflow
+
+cmd:
+python model_app.py
+
+Send GET request:
+URL : http://localhost:5000/predict?vol_moving_avg=465445.546&adj_close_rolling_med=25544
+
+cmd: curl 'http://localhost:5000/predict?vol_moving_avg=465445.546&adj_close_rolling_med=25544'
