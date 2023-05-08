@@ -5,5 +5,3 @@ Technical Evaluations
 - Problem 2: Feature Engineering
 - Problem 3: Integrate ML Training
 - Problem 4: Model Serving
-
-dags: contain all python and sql scripts, ml_pipeline run on Apache Airflow.
