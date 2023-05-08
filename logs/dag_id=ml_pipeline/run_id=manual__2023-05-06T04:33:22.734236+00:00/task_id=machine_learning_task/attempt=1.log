@@ -1,0 +1,37 @@
+[2023-05-06T04:33:54.838+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-06T04:33:22.734236+00:00 [queued]>
+[2023-05-06T04:33:54.845+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-06T04:33:22.734236+00:00 [queued]>
+[2023-05-06T04:33:54.845+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-06T04:33:54.853+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): machine_learning_task> on 2023-05-06 04:33:22.734236+00:00
+[2023-05-06T04:33:54.866+0000] {standard_task_runner.py:57} INFO - Started process 12464 to run task
+[2023-05-06T04:33:54.870+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'machine_learning_task', 'manual__2023-05-06T04:33:22.734236+00:00', '--job-id', '984', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmph85byade']
+[2023-05-06T04:33:54.871+0000] {standard_task_runner.py:85} INFO - Job 984: Subtask machine_learning_task
+[2023-05-06T04:33:54.914+0000] {task_command.py:410} INFO - Running <TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-06T04:33:22.734236+00:00 [running]> on host 03dea93b6a82
+[2023-05-06T04:33:54.986+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='lequanghop844@gmail.com' AIRFLOW_CTX_DAG_OWNER='Felix Le' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='machine_learning_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-06T04:33:22.734236+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-06T04:33:22.734236+00:00'
+[2023-05-06T04:33:55.192+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/joblib/parallel.py:776: UserWarning: Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1
+  **self._backend_args)
+
+[2023-05-06T04:33:55.194+0000] {logging_mixin.py:149} INFO - Fitting 3 folds for each of 1 candidates, totalling 3 fits
+[2023-05-06T04:34:15.456+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 16s
+[2023-05-06T04:34:15.507+0000] {logging_mixin.py:149} INFO - 34/92 [==========>...................] - ETA: 0s 
+[2023-05-06T04:34:15.557+0000] {logging_mixin.py:149} INFO - 67/92 [====================>.........] - ETA: 0s
+[2023-05-06T04:34:15.593+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 2ms/step
+[2023-05-06T04:34:15.610+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=  20.4s
+[2023-05-06T04:34:35.713+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 15s
+[2023-05-06T04:34:35.763+0000] {logging_mixin.py:149} INFO - 38/92 [===========>..................] - ETA: 0s 
+[2023-05-06T04:34:35.814+0000] {logging_mixin.py:149} INFO - 78/92 [========================>.....] - ETA: 0s
+[2023-05-06T04:34:35.832+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 1ms/step
+[2023-05-06T04:34:35.844+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=  20.2s
+[2023-05-06T04:34:55.994+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 18s
+[2023-05-06T04:34:56.046+0000] {logging_mixin.py:149} INFO - 22/92 [======>.......................] - ETA: 0s 
+[2023-05-06T04:34:56.097+0000] {logging_mixin.py:149} INFO - 40/92 [============>.................] - ETA: 0s
+[2023-05-06T04:34:56.147+0000] {logging_mixin.py:149} INFO - 71/92 [======================>.......] - ETA: 0s
+[2023-05-06T04:34:56.180+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 2ms/step
+[2023-05-06T04:34:56.195+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=  20.3s
+[2023-05-06T04:35:24.802+0000] {logging_function.py:10} INFO - Grid search results: 
+[2023-05-06T04:35:24.804+0000] {logging_function.py:12} INFO - Params: {'batch_size': 128, 'dropout': 0.4, 'epochs': 50, 'learning_rate': 0.0001, 'num_units': 32} - Mean test score: -0.0018072429222327892, Std test score: 0.0001018879686582475
+[2023-05-06T04:35:24.833+0000] {logging_mixin.py:149} INFO - Best parameters: {'batch_size': 128, 'dropout': 0.4, 'epochs': 50, 'learning_rate': 0.0001, 'num_units': 32}
+[2023-05-06T04:35:24.834+0000] {logging_mixin.py:149} INFO - Best score: -0.0018072429222327892
+[2023-05-06T04:35:24.840+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-05-06T04:35:24.856+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=machine_learning_task, execution_date=20230506T043322, start_date=20230506T043354, end_date=20230506T043524
+[2023-05-06T04:35:25.215+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-06T04:35:25.246+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,2 @@
+[2023-05-03T20:46:33.315+0000] {taskinstance.py:1119} INFO - Dependencies not met for <TaskInstance: ml_pipeline.featuring_data_task1 manual__2023-05-03T20:29:57.386069+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=1, removed=0, done=1), upstream_task_ids={'middle_task'}
+[2023-05-03T20:46:33.336+0000] {local_task_job_runner.py:161} INFO - Task is not able to be run

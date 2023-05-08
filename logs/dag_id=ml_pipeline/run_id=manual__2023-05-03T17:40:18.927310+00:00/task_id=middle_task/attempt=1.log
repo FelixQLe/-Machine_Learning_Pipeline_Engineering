@@ -1,0 +1,25 @@
+[2023-05-03T17:40:23.452+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.middle_task manual__2023-05-03T17:40:18.927310+00:00 [queued]>
+[2023-05-03T17:40:23.459+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.middle_task manual__2023-05-03T17:40:18.927310+00:00 [queued]>
+[2023-05-03T17:40:23.459+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T17:40:23.460+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-03T17:40:23.460+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T17:40:23.472+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): middle_task> on 2023-05-03 17:40:18.927310+00:00
+[2023-05-03T17:40:23.478+0000] {standard_task_runner.py:55} INFO - Started process 129 to run task
+[2023-05-03T17:40:23.481+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'middle_task', 'manual__2023-05-03T17:40:18.927310+00:00', '--job-id', '187', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmppahinar2']
+[2023-05-03T17:40:23.483+0000] {standard_task_runner.py:83} INFO - Job 187: Subtask middle_task
+[2023-05-03T17:40:23.539+0000] {task_command.py:389} INFO - Running <TaskInstance: ml_pipeline.middle_task manual__2023-05-03T17:40:18.927310+00:00 [running]> on host f11d128870f2
+[2023-05-03T17:40:23.587+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=lequanghop844@gmail.com
+AIRFLOW_CTX_DAG_OWNER=Felix Le
+AIRFLOW_CTX_DAG_ID=ml_pipeline
+AIRFLOW_CTX_TASK_ID=middle_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T17:40:18.927310+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-03T17:40:18.927310+00:00
+[2023-05-03T17:40:23.588+0000] {logging_mixin.py:137} INFO - All tasks complete!
+[2023-05-03T17:40:23.589+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-03T17:40:23.597+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=middle_task, execution_date=20230503T174018, start_date=20230503T174023, end_date=20230503T174023
+[2023-05-03T17:40:23.653+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-03T17:40:23.667+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

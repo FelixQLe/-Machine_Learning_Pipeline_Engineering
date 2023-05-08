@@ -1,0 +1,47 @@
+[2023-05-06T00:59:34.384+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-06T00:59:09.575429+00:00 [queued]>
+[2023-05-06T00:59:34.390+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-06T00:59:09.575429+00:00 [queued]>
+[2023-05-06T00:59:34.391+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-06T00:59:34.400+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): machine_learning_task> on 2023-05-06 00:59:09.575429+00:00
+[2023-05-06T00:59:34.409+0000] {standard_task_runner.py:57} INFO - Started process 470 to run task
+[2023-05-06T00:59:34.414+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'machine_learning_task', 'manual__2023-05-06T00:59:09.575429+00:00', '--job-id', '743', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmpyxj70c39']
+[2023-05-06T00:59:34.415+0000] {standard_task_runner.py:85} INFO - Job 743: Subtask machine_learning_task
+[2023-05-06T00:59:34.465+0000] {task_command.py:410} INFO - Running <TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-06T00:59:09.575429+00:00 [running]> on host 017e8ee7c816
+[2023-05-06T00:59:34.529+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='lequanghop844@gmail.com' AIRFLOW_CTX_DAG_OWNER='Felix Le' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='machine_learning_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-06T00:59:09.575429+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-06T00:59:09.575429+00:00'
+[2023-05-06T00:59:34.883+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/joblib/parallel.py:776: UserWarning: Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1
+  **self._backend_args)
+
+[2023-05-06T00:59:34.884+0000] {logging_mixin.py:149} INFO - Fitting 3 folds for each of 1 candidates, totalling 3 fits
+[2023-05-06T00:59:55.473+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 23s
+[2023-05-06T00:59:55.523+0000] {logging_mixin.py:149} INFO - 33/92 [=========>....................] - ETA: 0s 
+[2023-05-06T00:59:55.573+0000] {logging_mixin.py:149} INFO - 68/92 [=====================>........] - ETA: 0s
+[2023-05-06T00:59:55.613+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 2ms/step
+[2023-05-06T00:59:55.633+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=  20.7s
+[2023-05-06T01:00:16.703+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 15s
+[2023-05-06T01:00:16.753+0000] {logging_mixin.py:149} INFO - 37/92 [===========>..................] - ETA: 0s 
+[2023-05-06T01:00:16.804+0000] {logging_mixin.py:149} INFO - 75/92 [=======================>......] - ETA: 0s
+[2023-05-06T01:00:16.826+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 1ms/step
+[2023-05-06T01:00:16.837+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=  21.2s
+[2023-05-06T01:00:37.615+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 14s
+[2023-05-06T01:00:37.666+0000] {logging_mixin.py:149} INFO - 38/92 [===========>..................] - ETA: 0s 
+[2023-05-06T01:00:37.716+0000] {logging_mixin.py:149} INFO - 77/92 [========================>.....] - ETA: 0s
+[2023-05-06T01:00:37.736+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 1ms/step
+[2023-05-06T01:00:37.747+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=  20.9s
+[2023-05-06T01:01:06.725+0000] {logging_function.py:9} INFO - Grid search results: 
+[2023-05-06T01:01:06.726+0000] {logging_function.py:11} INFO - Params: {'batch_size': 128, 'dropout': 0.4, 'epochs': 50, 'learning_rate': 0.0001, 'num_units': 32} - Mean test score: -0.001807971136063521, Std test score: 0.00010681320421992581
+[2023-05-06T01:01:06.729+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/utils/fetching_best_model.py", line 50, in best_model_search
+    best_model.model.save('/Users/hople/Desktop/Work_sample/dags/model/best_lstm_model.keras')
+  File "/home/airflow/.local/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/airflow/.local/lib/python3.7/site-packages/tensorflow/python/lib/io/file_io.py", line 513, in recursive_create_dir_v2
+    _pywrap_file_io.RecursivelyCreateDir(compat.path_to_bytes(path))
+tensorflow.python.framework.errors_impl.PermissionDeniedError: /Users/hople/Desktop/Work_sample/dags/model; Permission denied
+[2023-05-06T01:01:06.744+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=ml_pipeline, task_id=machine_learning_task, execution_date=20230506T005909, start_date=20230506T005934, end_date=20230506T010106
+[2023-05-06T01:01:06.756+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 743 for task machine_learning_task (/Users/hople/Desktop/Work_sample/dags/model; Permission denied; 470)
+[2023-05-06T01:01:07.072+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2023-05-06T01:01:07.090+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

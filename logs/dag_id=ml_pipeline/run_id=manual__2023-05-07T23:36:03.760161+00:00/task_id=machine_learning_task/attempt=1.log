@@ -1,0 +1,31 @@
+[2023-05-07T23:36:25.334+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-07T23:36:03.760161+00:00 [queued]>
+[2023-05-07T23:36:25.342+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-07T23:36:03.760161+00:00 [queued]>
+[2023-05-07T23:36:25.342+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-07T23:36:25.350+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): machine_learning_task> on 2023-05-07 23:36:03.760161+00:00
+[2023-05-07T23:36:25.359+0000] {standard_task_runner.py:57} INFO - Started process 1307 to run task
+[2023-05-07T23:36:25.363+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'machine_learning_task', 'manual__2023-05-07T23:36:03.760161+00:00', '--job-id', '87', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmpeqj3dvlc']
+[2023-05-07T23:36:25.366+0000] {standard_task_runner.py:85} INFO - Job 87: Subtask machine_learning_task
+[2023-05-07T23:36:25.410+0000] {task_command.py:410} INFO - Running <TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-07T23:36:03.760161+00:00 [running]> on host d2db9e8a0ded
+[2023-05-07T23:36:25.472+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='lequanghop844@gmail.com' AIRFLOW_CTX_DAG_OWNER='Felix Le' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='machine_learning_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-07T23:36:03.760161+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-07T23:36:03.760161+00:00'
+[2023-05-07T23:36:25.777+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/joblib/parallel.py:776: UserWarning: Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1
+  **self._backend_args)
+
+[2023-05-07T23:36:25.778+0000] {logging_mixin.py:149} INFO - Fitting 3 folds for each of 1 candidates, totalling 3 fits
+[2023-05-07T23:36:30.719+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 15s
+[2023-05-07T23:36:30.769+0000] {logging_mixin.py:149} INFO - 70/92 [=====================>........] - ETA: 0s 
+[2023-05-07T23:36:30.782+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 699us/step
+[2023-05-07T23:36:30.800+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=   5.0s
+[2023-05-07T23:36:52.706+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 20s
+[2023-05-07T23:36:52.756+0000] {logging_mixin.py:149} INFO - 63/92 [===================>..........] - ETA: 0s 
+[2023-05-07T23:36:52.778+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 794us/step
+[2023-05-07T23:36:52.794+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=  22.0s
+[2023-05-07T23:36:59.746+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 21s
+[2023-05-07T23:36:59.796+0000] {logging_mixin.py:149} INFO - 68/92 [=====================>........] - ETA: 0s 
+[2023-05-07T23:36:59.813+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 738us/step
+[2023-05-07T23:36:59.824+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=   7.0s
+[2023-05-07T23:37:08.866+0000] {save.py:276} WARNING - Found untraced functions such as _update_step_xla, lstm_cell_3_layer_call_fn, lstm_cell_3_layer_call_and_return_conditional_losses while saving (showing 3 of 3). These functions will not be directly callable after loading.
+[2023-05-07T23:37:09.153+0000] {builder_impl.py:798} INFO - Assets written to: /Users/hople/Desktop/Work_sample/model/best_lstm_model.SavedModel/assets
+[2023-05-07T23:37:09.319+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-05-07T23:37:09.331+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=machine_learning_task, execution_date=20230507T233603, start_date=20230507T233625, end_date=20230507T233709
+[2023-05-07T23:37:09.674+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-07T23:37:09.702+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check
