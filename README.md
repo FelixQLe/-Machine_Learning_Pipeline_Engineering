@@ -17,68 +17,10 @@ References:
 - https://sparkbyexamples.com/pandas/pandas-read-multiple-csv-files/?amp=1
 
 #### Directory structure: 
-dags/
-  ├── ml_pipeline.py
-  ├── sql/
-  │     └── create_tracking_best_model_table.sql
-  └── utils/
-        ├── add_symbol_serName.py
-        ├── custome_LSTMregressor.py
-        ├── data_processing.py
-        ├── feature_engineering.py
-        ├── features_added.py
-        ├── fetch_data.py
-      ├── fetching_best_model.py
-      ├── grid_search.py
-      ├── load_files.py
-|     ├── logging_function.py
-      ├── postgres_database_conf.py
-      ├── preparing_data.py
-      ├── rolling_aveage_median.py
-      ├── save_model.py
-      ├── save_parquet.py
-      ├── split_data.py
-      ├── storing_metrics_to_database.py
-      └── unit_tests_rollings.py
-|___model
-|   |___ best_lstm_model.SavedModel
-    |___ scaler_X.save
-    |___ scaler_y.save
-    |___training_log
-        |__grid_search.csv
-|
-data/
-├── stocks_etfs/
-│   ├── A.csv
-│   ├── AA.csv
-│   ├── AACG.csv
-│   ├── AAL.csv
-│   ├── HAYN.csv
-│   ├── HBAN.csv
-│   ├── HBANN.csv
-│   ├── HBANO.csv
-│   ├── IOO.csv
-│   ├── IOSP.csv
-│   ├── IOTS.csv
-│   ├── IOVA.csv
-│   ├── IP.csv
-│   ├── IPAC.csv
-│   ├── IPAR.csv
-│   ├── IPAY.csv
-│   ├── VSGX.csv
-│   ├── VSL.csv
-│   ├── VSMV.csv
-│   ├── VSS.csv
-│   ├── VTHR.csv
-│   ├── VTI.csv
-│   └── VTV.csv
-└── processed_stocks_etfs/
-|
-└── featuresAdded_stocks_etfs/
-
+directory_structure.txt
 
 dags: 
-- contain all python and sql scripts, ml_pipeline run on Apache Airflow, training_log, training_metrics
+- contain all python and sql scripts, ml_pipeline run on Apache Airflow, training_log, training_metrics, data
 
 Model_API:
 - contain flask API app, deploying ml_model to predict trading Volume, and ho_to_run.txt
