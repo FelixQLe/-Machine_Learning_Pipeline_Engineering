@@ -5,7 +5,7 @@
 - Problem 2: Feature Engineering
 - Problem 3: Integrate ML Training
 - Problem 4: Model Serving
-  * https://github.com/FelixQLe/Deploying_MLModel_Automate_Loan_Eligibility_FLaskAPI
+  https://github.com/FelixQLe/Deploying_MLModel_Automate_Loan_Eligibility_FLaskAPI
 ### References for designing Airflow workflow, problem 1-3
 - https://airflow.apache.org/docs/apache-airflow/stable/tutorial/fundamentals.html#testing
 - https://towardsdatascience.com/end-to-end-machine-learning-pipeline-with-docker-and-apache-airflow-from-scratch-35f6a75f57ad
