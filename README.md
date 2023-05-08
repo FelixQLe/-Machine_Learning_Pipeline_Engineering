@@ -26,10 +26,11 @@ Model_API:
 - contain flask API app, deploying ml_model to predict trading Volume, and ho_to_run.txt
 
 ### Machine Learning architecture
-Task 1: create sql table to store machine learning best params
-Group task 1(task 2-9): waiting for task one completed successfully, use 8 processors to process 8 patchs of df
-Group task 2(task 10-17): waiting for group ask 1 completed sucessfully, use 8 processors to process 8 processed-batchs from group 1
-Task final: save ML best params, loss, scores to sql table created from task 1
+
+- Task 1: create sql table to store machine learning best params
+- Group task 1(task 2-9): waiting for task one completed successfully, use 8 processors to process 8 patchs of df
+- Group task 2(task 10-17): waiting for group ask 1 completed sucessfully, use 8 processors to process 8 processed-batchs from group 1
+- Task final: save ML best params, loss, scores to sql table created from task 1
 
 ![Screenshot 2023-05-08 at 4 15 13 AM](https://user-images.githubusercontent.com/93171100/236777778-297e7f10-01a0-467c-82d5-218d319f6836.png)
 
