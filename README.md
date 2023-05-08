@@ -28,3 +28,4 @@ Model_API:
 ### Machine Learning architecture
 ![Screenshot 2023-05-08 at 4 15 13 AM](https://user-images.githubusercontent.com/93171100/236777778-297e7f10-01a0-467c-82d5-218d319f6836.png)
 
+<img width="1367" alt="Screenshot 2023-05-08 at 4 40 41 AM" src="https://user-images.githubusercontent.com/93171100/236777950-0e9d9121-0f58-498b-8c38-c23a8733d49a.png">
