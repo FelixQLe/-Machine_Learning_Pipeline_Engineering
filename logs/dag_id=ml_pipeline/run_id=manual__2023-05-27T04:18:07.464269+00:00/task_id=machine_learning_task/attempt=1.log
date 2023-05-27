@@ -1,0 +1,32 @@
+[2023-05-27T04:18:32.384+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-27T04:18:07.464269+00:00 [queued]>
+[2023-05-27T04:18:32.394+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-27T04:18:07.464269+00:00 [queued]>
+[2023-05-27T04:18:32.395+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-27T04:18:32.407+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): machine_learning_task> on 2023-05-27 04:18:07.464269+00:00
+[2023-05-27T04:18:32.420+0000] {standard_task_runner.py:57} INFO - Started process 610 to run task
+[2023-05-27T04:18:32.426+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'machine_learning_task', 'manual__2023-05-27T04:18:07.464269+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmp427a_qlg']
+[2023-05-27T04:18:32.430+0000] {standard_task_runner.py:85} INFO - Job 29: Subtask machine_learning_task
+[2023-05-27T04:18:32.493+0000] {task_command.py:410} INFO - Running <TaskInstance: ml_pipeline.machine_learning_task manual__2023-05-27T04:18:07.464269+00:00 [running]> on host 88aa0339fc0a
+[2023-05-27T04:18:32.573+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='lequanghop844@gmail.com' AIRFLOW_CTX_DAG_OWNER='Felix Le' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='machine_learning_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-27T04:18:07.464269+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-27T04:18:07.464269+00:00'
+[2023-05-27T04:18:33.002+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/joblib/parallel.py:776: UserWarning: Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1
+  **self._backend_args)
+
+[2023-05-27T04:18:33.003+0000] {logging_mixin.py:149} INFO - Fitting 3 folds for each of 1 candidates, totalling 3 fits
+[2023-05-27T04:18:39.474+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 14s
+[2023-05-27T04:18:39.524+0000] {logging_mixin.py:149} INFO - 84/92 [==========================>...] - ETA: 0s 
+[2023-05-27T04:18:39.530+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 613us/step
+[2023-05-27T04:18:39.546+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=   6.5s
+[2023-05-27T04:18:45.950+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 22s
+[2023-05-27T04:18:46.000+0000] {logging_mixin.py:149} INFO - 49/92 [==============>...............] - ETA: 0s 
+[2023-05-27T04:18:46.037+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 956us/step
+[2023-05-27T04:18:46.054+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=   6.5s
+[2023-05-27T04:18:54.779+0000] {logging_mixin.py:149} INFO -  1/92 [..............................] - ETA: 23s
+[2023-05-27T04:18:54.829+0000] {logging_mixin.py:149} INFO - 45/92 [=============>................] - ETA: 0s 
+[2023-05-27T04:18:54.880+0000] {logging_mixin.py:149} INFO - 85/92 [==========================>...] - ETA: 0s
+[2023-05-27T04:18:54.891+0000] {logging_mixin.py:149} INFO - 92/92 [==============================] - 0s 1ms/step
+[2023-05-27T04:18:54.916+0000] {logging_mixin.py:149} INFO - [CV] END batch_size=128, dropout=0.4, epochs=50, learning_rate=0.0001, num_units=32; total time=   8.9s
+[2023-05-27T04:19:05.183+0000] {save.py:276} WARNING - Found untraced functions such as _update_step_xla, lstm_cell_3_layer_call_fn, lstm_cell_3_layer_call_and_return_conditional_losses while saving (showing 3 of 3). These functions will not be directly callable after loading.
+[2023-05-27T04:19:05.615+0000] {builder_impl.py:798} INFO - Assets written to: dags/model/best_lstm_model.SavedModel/assets
+[2023-05-27T04:19:05.811+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-05-27T04:19:05.824+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=machine_learning_task, execution_date=20230527T041807, start_date=20230527T041832, end_date=20230527T041905
+[2023-05-27T04:19:06.160+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-27T04:19:06.188+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check
