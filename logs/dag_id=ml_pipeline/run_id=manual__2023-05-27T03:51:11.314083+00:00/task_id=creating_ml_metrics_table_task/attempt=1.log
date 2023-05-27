@@ -1,0 +1,40 @@
+[2023-05-27T03:51:15.079+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.creating_ml_metrics_table_task manual__2023-05-27T03:51:11.314083+00:00 [queued]>
+[2023-05-27T03:51:15.085+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.creating_ml_metrics_table_task manual__2023-05-27T03:51:11.314083+00:00 [queued]>
+[2023-05-27T03:51:15.086+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-27T03:51:15.093+0000] {taskinstance.py:1350} INFO - Executing <Task(PostgresOperator): creating_ml_metrics_table_task> on 2023-05-27 03:51:11.314083+00:00
+[2023-05-27T03:51:15.103+0000] {standard_task_runner.py:57} INFO - Started process 103 to run task
+[2023-05-27T03:51:15.108+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'creating_ml_metrics_table_task', 'manual__2023-05-27T03:51:11.314083+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmppakvi17g']
+[2023-05-27T03:51:15.115+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask creating_ml_metrics_table_task
+[2023-05-27T03:51:15.165+0000] {task_command.py:410} INFO - Running <TaskInstance: ml_pipeline.creating_ml_metrics_table_task manual__2023-05-27T03:51:11.314083+00:00 [running]> on host c41fe6e94877
+[2023-05-27T03:51:15.226+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='lequanghop844@gmail.com' AIRFLOW_CTX_DAG_OWNER='Felix Le' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='creating_ml_metrics_table_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-27T03:51:11.314083+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-27T03:51:11.314083+00:00'
+[2023-05-27T03:51:15.228+0000] {sql.py:262} INFO - Executing: CREATE TABLE IF NOT EXISTS tracking_best_model (
+    experiment_id SERIAL PRIMARY KEY,
+    experiment_datetime VARCHAR NOT NULL,
+    cv_folds NUMERIC NOT NULL,
+    batch_size NUMERIC NOT NULL,
+    dropout FLOAT NOT NULL,
+    epochs NUMERIC NOT NULL,
+    learning_rate FLOAT NOT NULL,
+    num_units NUMERIC NOT NULL,
+    mean_test_score FLOAT NOT NULL,
+    std_test_score FLOAT NOT NULL
+);
+[2023-05-27T03:51:15.246+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 263, in execute
+    hook = self.get_db_hook()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 181, in get_db_hook
+    return self._hook
+  File "/home/airflow/.local/lib/python3.7/site-packages/cached_property.py", line 36, in __get__
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 143, in _hook
+    conn = BaseHook.get_connection(self.conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 72, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 434, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `pg_work_sample` isn't defined
+[2023-05-27T03:51:15.249+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=ml_pipeline, task_id=creating_ml_metrics_table_task, execution_date=20230527T035111, start_date=20230527T035115, end_date=20230527T035115
+[2023-05-27T03:51:15.256+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 3 for task creating_ml_metrics_table_task (The conn_id `pg_work_sample` isn't defined; 103)
+[2023-05-27T03:51:15.280+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2023-05-27T03:51:15.303+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
