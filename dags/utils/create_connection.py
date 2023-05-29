@@ -12,10 +12,13 @@ def create_connection_task():
     schema = ''
 
     # Check if the connection already exists
-    existing_conn = BaseHook.get_connection(conn_id=conn_id)
-    if existing_conn is not None:
-        print(f"Connection '{conn_id}' already exists.")
-        return
+    try:
+        existing_conn = BaseHook.get_connection(conn_id=conn_id)
+        if existing_conn is not None:
+            print(f"Connection '{conn_id}' already exists.")
+            return
+    except:
+        pass
     # Create the Connection object
     conn = Connection(
         conn_id=conn_id,
