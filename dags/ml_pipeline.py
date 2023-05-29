@@ -44,16 +44,18 @@ machine_learning_task = PythonOperator(task_id='machine_learning_task',
                                        dag=dag,
                                        )
 
+storing_metrics_to_database_task = PythonOperator(task_id='storing_metrics_to_database_task',
+                                                  python_callable=track_experiments_info,
+                                                  dag=dag
+                                                  )
+
+
 collecting_all_metrics = PostgresOperator(task_id="collecting_all_metrics",
                                           postgres_conn_id='pg_work_sample',
                                           sql="SELECT * FROM tracking_best_model;",
                                           dag=dag
                                           )
 
-storing_metrics_to_database_task = PythonOperator(task_id='storing_metrics_to_database_task',
-                                                  python_callable=track_experiments_info,
-                                                  dag=dag
-                                                  )
 
 processing_tasks = []
 featuring_tasks = []
