@@ -7,7 +7,7 @@ from utils.data_processing import data_processing
 from utils.feature_engineering import feature_engineering
 from utils.fetching_best_model import best_model_search
 from utils.storing_metrics_to_database import track_experiments_info
-
+from utils.create_connection import create_connection_task
 
 default_args = {
     'owner': 'Felix Le',
@@ -25,6 +25,12 @@ dag = DAG("ml_pipeline",
 
 #get batch number for parallel processing
 n_processor = cpu_count()
+
+create_pg_connection_task = PythonOperator(
+                                        task_id='create_pg_connection_task',
+                                        python_callable=create_connection_task,
+                                        dag=dag,
+                                        )
 
 creating_ml_metrics_table_task = PostgresOperator(
                                         task_id ="creating_ml_metrics_table_task",
@@ -72,6 +78,6 @@ for n in range(n_processor):
 
 
 for i in range(n_processor):
-    creating_ml_metrics_table_task >> processing_tasks[i] >> featuring_tasks[i] >> machine_learning_task >> storing_metrics_to_database_task >> collecting_all_metrics
+    create_pg_connection_task >> creating_ml_metrics_table_task >> processing_tasks[i] >> featuring_tasks[i] >> machine_learning_task >> storing_metrics_to_database_task >> collecting_all_metrics
 
 
