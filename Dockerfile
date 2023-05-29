@@ -5,4 +5,5 @@ USER airflow
 RUN pip install --no-cache-dir \
     tensorflow \
     scikit-learn \
+    pyarrow==10.0.1
     
