@@ -30,9 +30,12 @@ dags subrepo:
 - Group task 2(task 10-17): waiting for group ask 1 completed sucessfully, use 8 processors to process 8 processed-batchs from group 1
 - Task final: save ML best params, loss, scores to sql table created from task 1
 
-![Screenshot 2023-05-08 at 4 15 13 AM](https://user-images.githubusercontent.com/93171100/236777778-297e7f10-01a0-467c-82d5-218d319f6836.png)
+![Screenshot 2023-05-29 at 2 45 13 AM](https://github.com/FelixQLe/Work_Sample_ML_Pipeline/assets/93171100/966e3e97-ac45-47fc-a6d8-01c357c993f8)
 
-<img width="1367" alt="Screenshot 2023-05-08 at 4 40 41 AM" src="https://user-images.githubusercontent.com/93171100/236777950-0e9d9121-0f58-498b-8c38-c23a8733d49a.png">
+![Screenshot 2023-05-29 at 2 46 17 AM](https://github.com/FelixQLe/Work_Sample_ML_Pipeline/assets/93171100/a515dff4-6403-4e16-a160-bf1427af2982)
+
+![Screenshot 2023-05-29 at 2 47 30 AM](https://github.com/FelixQLe/Work_Sample_ML_Pipeline/assets/93171100/c487375e-a82f-419b-9a28-91900142fe29)
+
 
 ### Model_API subrepo:
 - contain flask API app, deploying ml_model to predict trading Volume, and ho_to_run.txt
