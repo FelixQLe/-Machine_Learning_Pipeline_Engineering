@@ -45,3 +45,5 @@ dags subrepo:
 ![Screenshot 2023-05-08 at 12 54 44 PM](https://user-images.githubusercontent.com/93171100/236884019-1195fdd6-977c-48b7-8269-091ef485ab3e.png)
 
 ### Directory Airflow ML Pipeline Structure:
+![Screenshot 2023-05-29 at 3 18 24 PM](https://github.com/FelixQLe/Work_Sample_ML_Pipeline/assets/93171100/644ad518-fae6-4be1-be87-dd4619bf0824)
+![Screenshot 2023-05-29 at 3 18 41 PM](https://github.com/FelixQLe/Work_Sample_ML_Pipeline/assets/93171100/ec1187a0-3a3f-4b66-8937-260a5d0be5c6)
