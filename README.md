@@ -25,9 +25,10 @@ dags subrepo:
 
 ### Machine Learning architecture
 
-- Task 1: create sql table to store machine learning best params
-- Group task 1(task 2-9): waiting for task one completed successfully, use 8 processors to process 8 patchs of df
-- Group task 2(task 10-17): waiting for group ask 1 completed sucessfully, use 8 processors to process 8 processed-batchs from group 1
+- Task 1: create a new connection to postgres
+- Task 2: create sql table to store machine learning best params
+- Group task 1(task 3-10): waiting for task one completed successfully, use 8 processors to process 8 patchs of df
+- Group task 2(task 11-18): waiting for group ask 1 completed sucessfully, use 8 processors to process 8 processed-batchs from group 1
 - Task final: save ML best params, loss, scores to sql table created from task 1
 
 ![Screenshot 2023-05-29 at 2 45 13 AM](https://github.com/FelixQLe/Work_Sample_ML_Pipeline/assets/93171100/966e3e97-ac45-47fc-a6d8-01c357c993f8)
