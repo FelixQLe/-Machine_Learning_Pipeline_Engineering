@@ -19,7 +19,7 @@
 
 ### Airflow docker compose
 - docker-compose.yaml
-- Dockerfile, containing dependencies will be install for first time run docker-compose up
+- Dockerfile, containing dependencies will be installed for first time run docker-compose up
 ### Directory structure: 
 directory_structure.txt
 
