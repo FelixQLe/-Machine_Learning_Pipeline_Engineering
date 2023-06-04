@@ -1,0 +1,108 @@
+[2023-06-04T23:39:41.064+0000] {processor.py:156} INFO - Started process (PID=30) to work on /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:39:41.066+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/ml_pipeline.py for tasks to queue
+[2023-06-04T23:39:41.067+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:41.067+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:39:48.094+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/tensorflow_io/python/ops/__init__.py:98 UserWarning: unable to load libtensorflow_io_plugins.so: unable to open file: libtensorflow_io_plugins.so, from paths: ['/home/airflow/.local/lib/python3.7/site-packages/tensorflow_io/python/ops/libtensorflow_io_plugins.so']
+caused by: ["[Errno 2] The file to load file system plugin from does not exist.: '/home/airflow/.local/lib/python3.7/site-packages/tensorflow_io/python/ops/libtensorflow_io_plugins.so'"]
+[2023-06-04T23:39:48.102+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/tensorflow_io/python/ops/__init__.py:104 UserWarning: file system plugins are not loaded: unable to open file: libtensorflow_io.so, from paths: ['/home/airflow/.local/lib/python3.7/site-packages/tensorflow_io/python/ops/libtensorflow_io.so']
+caused by: ['/home/airflow/.local/lib/python3.7/site-packages/tensorflow_io/python/ops/libtensorflow_io.so: cannot open shared object file: No such file or directory']
+[2023-06-04T23:39:48.608+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.607+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): create_pg_connection_task>, creating_ml_metrics_table_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.609+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.609+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): creating_ml_metrics_table_task>, create_pg_connection_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.610+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.610+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): machine_learning_task>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.610+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.610+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, machine_learning_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.611+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.611+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, collecting_all_metrics already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.612+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.612+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): collecting_all_metrics>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.613+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.613+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): create_pg_connection_task>, creating_ml_metrics_table_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.613+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.613+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): creating_ml_metrics_table_task>, create_pg_connection_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.614+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.614+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): machine_learning_task>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.615+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.615+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, machine_learning_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.616+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.616+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, collecting_all_metrics already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.617+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.617+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): collecting_all_metrics>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.617+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.617+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): create_pg_connection_task>, creating_ml_metrics_table_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.618+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.618+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): creating_ml_metrics_table_task>, create_pg_connection_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.619+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.618+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): machine_learning_task>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.619+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.619+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, machine_learning_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.620+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.620+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, collecting_all_metrics already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.620+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.620+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): collecting_all_metrics>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.621+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.621+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): create_pg_connection_task>, creating_ml_metrics_table_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.621+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.621+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): creating_ml_metrics_table_task>, create_pg_connection_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.622+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.622+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): machine_learning_task>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.623+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.623+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, machine_learning_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.623+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.623+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, collecting_all_metrics already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.624+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.624+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): collecting_all_metrics>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.624+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.624+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): create_pg_connection_task>, creating_ml_metrics_table_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.625+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.625+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): creating_ml_metrics_table_task>, create_pg_connection_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.626+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.626+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): machine_learning_task>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.627+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.627+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, machine_learning_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.628+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.628+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, collecting_all_metrics already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.629+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.629+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): collecting_all_metrics>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.629+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.629+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): create_pg_connection_task>, creating_ml_metrics_table_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.630+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.630+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): creating_ml_metrics_table_task>, create_pg_connection_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.631+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.631+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): machine_learning_task>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.631+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.631+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, machine_learning_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.632+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.632+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, collecting_all_metrics already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.632+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.632+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): collecting_all_metrics>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.633+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.633+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): create_pg_connection_task>, creating_ml_metrics_table_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.633+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.633+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): creating_ml_metrics_table_task>, create_pg_connection_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.634+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.634+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): machine_learning_task>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.635+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.635+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, machine_learning_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.635+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.635+0000] {taskmixin.py:211} WARNING - Dependency <Task(PythonOperator): storing_metrics_to_database_task>, collecting_all_metrics already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.636+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.636+0000] {taskmixin.py:211} WARNING - Dependency <Task(PostgresOperator): collecting_all_metrics>, storing_metrics_to_database_task already registered for DAG: ml_pipeline
+[2023-06-04T23:39:48.652+0000] {processor.py:809} INFO - DAG(s) dict_keys(['ml_pipeline']) retrieved from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:39:48.896+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.896+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:ml_pipeline
+[2023-06-04T23:39:48.906+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.905+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:ml_pipeline
+[2023-06-04T23:39:48.914+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.914+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:ml_pipeline
+[2023-06-04T23:39:48.915+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.915+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-04T23:39:48.931+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.931+0000] {dag.py:2747} INFO - Creating ORM DAG for ml_pipeline
+[2023-06-04T23:39:48.946+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:39:48.946+0000] {dag.py:3490} INFO - Setting next_dagrun for ml_pipeline to None, run_after=None
+[2023-06-04T23:39:48.968+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/ml_pipeline.py took 7.909 seconds
+[2023-06-04T23:40:04.227+0000] {processor.py:156} INFO - Started process (PID=46) to work on /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:04.230+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/ml_pipeline.py for tasks to queue
+[2023-06-04T23:40:04.232+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:40:04.231+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:04.241+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:40:04.240+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline.py", line 11
+    from utils.
+              ^
+SyntaxError: invalid syntax
+[2023-06-04T23:40:04.242+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:04.267+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/ml_pipeline.py took 0.047 seconds
+[2023-06-04T23:40:07.291+0000] {processor.py:156} INFO - Started process (PID=47) to work on /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:07.293+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/ml_pipeline.py for tasks to queue
+[2023-06-04T23:40:07.295+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:40:07.295+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:07.306+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:40:07.304+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline.py", line 11
+    from utils.unit_tests_rollings
+                                 ^
+SyntaxError: invalid syntax
+[2023-06-04T23:40:07.307+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:07.329+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/ml_pipeline.py took 0.043 seconds
+[2023-06-04T23:40:10.355+0000] {processor.py:156} INFO - Started process (PID=48) to work on /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:10.360+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/ml_pipeline.py for tasks to queue
+[2023-06-04T23:40:10.361+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:40:10.361+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:10.368+0000] {logging_mixin.py:149} INFO - [2023-06-04T23:40:10.367+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline.py", line 11
+    from utils.unit_tests_rollings
+                                  ^
+SyntaxError: invalid syntax
+[2023-06-04T23:40:10.368+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline.py
+[2023-06-04T23:40:10.391+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/ml_pipeline.py took 0.041 seconds

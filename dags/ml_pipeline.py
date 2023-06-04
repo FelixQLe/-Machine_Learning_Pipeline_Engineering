@@ -8,6 +8,7 @@ from utils.feature_engineering import feature_engineering
 from utils.fetching_best_model import best_model_search
 from utils.storing_metrics_to_database import track_experiments_info
 from utils.create_connection import create_connection_task
+from utils.unit_tests_rollings 
 
 default_args = {
     'owner': 'Felix Le',
