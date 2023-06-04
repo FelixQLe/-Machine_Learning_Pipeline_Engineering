@@ -17,8 +17,12 @@
 - https://stackoverflow.com/questions/50337843/extract-file-name-from-read-csv-python
 - https://sparkbyexamples.com/pandas/pandas-read-multiple-csv-files/?amp=1
 
+### Airflow docker compose
+- docker-compose.yaml
+- Dockerfile, containing dependencies will be install for first time run docker-compose up
 ### Directory structure: 
 directory_structure.txt
+
 
 dags subrepo: 
 - contain all python and sql scripts, ml_pipeline run on Apache Airflow, training_log, training_metrics, data
