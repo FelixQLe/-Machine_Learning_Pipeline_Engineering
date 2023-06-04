@@ -21,7 +21,7 @@
 - docker-compose.yaml
 - Dockerfile, containing dependencies will be installed for first time run docker-compose up
 ### Directory structure: 
-directory_structure.txt
+directory_structure.txt, showed in the end of this README.md
 
 
 dags subrepo: 
