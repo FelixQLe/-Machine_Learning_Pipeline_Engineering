@@ -1,0 +1,5 @@
+AWS public:
+mail URL: http://ec2-15-222-5-99.ca-central-1.compute.amazonaws.com
+URL predict: http://ec2-15-222-5-99.ca-central-1.compute.amazonaws.com/predict?vol_moving_avg=465445.546&adj_close_rolling_med=25544
+
+cmd: curl 'http://ec2-15-222-5-99.ca-central-1.compute.amazonaws.com/predict?vol_moving_avg=465445.546&adj_close_rolling_med=25544'
