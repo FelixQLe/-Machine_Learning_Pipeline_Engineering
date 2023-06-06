@@ -1,0 +1,10 @@
+
+run "docker compose up"
+
+NOTES:
+
+all tasks python script and data in dags folder
+Flatted Directory:
+
+|-dags
+|_docker-compose.yaml
